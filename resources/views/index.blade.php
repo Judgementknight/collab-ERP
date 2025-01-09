@@ -23,13 +23,14 @@
            <x-navbar/>
             <main class="content px-3 py-2">
               @yield('content')
+        
             </main>
 
            <x-footer/>
         </div>
     </div>
     <script src="{{asset("js/script.js")}}"></script>
-
+    <script src="./node_modules/preline/dist/preline.js"></script>
 </body>
 
 </html>
