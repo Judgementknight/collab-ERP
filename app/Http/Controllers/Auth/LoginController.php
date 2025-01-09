@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Container\Attributes\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as RoutingController;
 
-class LoginController extends Controller
+class LoginController extends RoutingController
 {
     public function showLoginForm(){
         return view('auth.login');
