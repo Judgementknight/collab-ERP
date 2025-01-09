@@ -1,8 +1,3 @@
-@extends('layouts.app')
-
-@section('title', 'Admin Dashboard')
-
-@section('content')
 <div class="container-fluid">
     <div class="mb-3">
         <h4>Admin Dashboard</h4>
@@ -19,9 +14,9 @@
         <div class="col-12 col-md-6 d-flex">
             <div class="card flex-fill border-0">
                 <div class="card-body">
-                    <h4>{{$totalEarnings}}</h4>
+                    <h4>{{ $totalEarnings }}</h4>
                     <p>Total Earnings</p>
-                    <div> <span class="badge text-success">{{$growthRate}}</span>Since last month</div>
+                    <div><span class="badge text-success">{{ $growthRate }}</span> Since last month</div>
                 </div>
             </div>
         </div>
@@ -42,17 +37,15 @@
                 </thead>
                 <tbody>
                     @foreach ($users as $user)
-                        <tr>
-                            <td>{{ $user['id'] }}</td>
-                            <td>{{ $user['first_name'] }}</td>
-                            <td>{{ $user['last_name'] }}</td>
-                            <td>{{ $user['handle'] }}</td>
-                        </tr>
+                    <tr>
+                        <td>{{ $user['id'] }}</td>
+                        <td>{{ $user['first_name'] }}</td>
+                        <td>{{ $user['last_name'] }}</td>
+                        <td>{{ $user['handle'] }}</td>
+                    </tr>
                     @endforeach
                 </tbody>
-
             </table>
         </div>
     </div>
 </div>
-@endsection
