@@ -9,9 +9,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.app');
 });
+AttendanceController
 
 
 Route::get('/admin/dashboard',[AdminDashboardController::class, 'index'])->name('admin.dashboard');
+Route::get('/admin/dashboard/attendance',[AttendanceController::class, 'index'])->name('admin.dashboard');
+
 
 // Route::get('login',)
 
